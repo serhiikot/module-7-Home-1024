@@ -1,0 +1,198 @@
+@import url(../css/common_style.css);
+
+/* ================СЛАЙДЕр============== */
+.slider {
+    position: relative;
+    background-color: #fff;
+}
+
+/* ----------------ТЕКС СЛАЙДЕРА-------------- */
+.plentyOfPlaces,
+.worthSeeing {
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+.plentyOfPlaces {
+    color: #263555;
+}
+.worthSeeing {
+    color: #fff;
+}
+.plentyOfPlaces {
+    position: absolute;
+    width: 225px;
+    height: 60px;
+    top: 218px;
+    z-index: 4;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 22px;
+}
+.worthSeeing {
+    position: absolute;
+    width: 276px;
+    height: 60px;
+    top: 279px;
+    z-index: 3;
+    
+    background-color: #38afe5;
+    font-size: 34px;
+}
+
+/* ----------------СЛАЙДЫ------------------- */
+#slides {
+    position: relative;
+    width: 902px;
+    height: 579px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+.showing {
+    opacity: 1;
+    z-index: 2;
+}
+.slide:nth-of-type(1) {
+    background-image: url(../img/slides/slide_1.png);
+}
+.slide:nth-of-type(2) {
+    background-image: url(../img/slides/slide_2.png);
+}
+.slide:nth-of-type(3) {
+    background-image: url(../img/slides/slide_3.png);
+}
+.slide:nth-of-type(4) {
+    background-image: url(../img/slides/slide_4.png);
+}
+
+/* ---------------КНОПКА СЛАЙДЕРА------------ */
+.previousSlide,
+.nextSlide {
+    position: absolute;
+    width: 45px;
+    height: 90px; 
+    bottom: 39px;
+    background-color: #38afe5;
+    border: none;
+    z-index: 3;
+}
+.previousSlide {
+    left: 37px;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+}
+.nextSlide {
+    left: 82px;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+}
+.previousSlide:before,
+.nextSlide:before {
+    position: absolute;
+    bottom: 35px;
+    color: #c3e7f7;
+    z-index: 3;
+}
+.previousSlide:before {
+    content: "🡨";
+    left: 23px;
+}
+.nextSlide:before {
+    content: "🡪";
+    right: 23px;
+}
+.previousSlide:active,
+.nextSlide:active {
+    background-color: #40c1fb;
+}
+
+/* ------------TOP DESTINATION----------- */
+
+.destinationHeader {
+    font-family: 'Pathway Gothic One', sans-serif;
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #263555;
+}
+.cities {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+.cities > li {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.212);
+    width: 288px;
+    height: 270px;
+}
+
+/* ---------------ABOUT CITIES-------------- */
+.dropVeniceGuide,
+.dropNewYorkGuide,
+.dropParisGuide {
+    opacity: 0;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: opacity 0.3s linear;
+    background-color: #193149;
+}
+.venice:hover > .dropVeniceGuide,
+.newYork:hover > .dropNewYorkGuide,
+.paris:hover > .dropParisGuide {
+    opacity: 1;
+} 
+.cities h3 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: rgb(248, 160, 160);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 60px;
+}
+.cities p {
+    font-family: "ArialRegular", sans-serif;
+    font-size: 0.6rem;
+    text-align: justify;
+    color: #cbc6c6;
+    margin: 7px;
+    line-height: 1.5;
+}
+.detailsButton {
+    margin-left: 80px;
+    margin-top: 20px;
+    font-family: 'ArialRegular', sans-serif;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    background-color: #fcf5f6; 
+    border: 1px solid #b2abab;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+}
